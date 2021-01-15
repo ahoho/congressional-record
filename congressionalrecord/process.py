@@ -231,6 +231,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO)
+    Path(args.output_dir).mkdir(exist_ok=True, parents=True)
 
     # Flatten & clean legislator data
     raw_legislator_data = []
