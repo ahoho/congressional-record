@@ -42,7 +42,7 @@ class Downloader(object):
                 dir_str = 'CREC-' + day_str
                 year_str = str(day.year)
                 if 'outpath' not in list(kwargs.keys()):
-                    outpath = 'output'
+                    outpath = 'data'
                 else:
                     outpath = kwargs['outpath']
                 try:
@@ -84,7 +84,7 @@ class Downloader(object):
         end : Same form as start. This is the end date.
 
         outpath : Output path RELATIVE TO the present working directory. Defaults
-                  to 'output' and works fine when you run it from the repo's root
+                  to 'data' and works fine when you run it from the repo's root
                   directory.
 
         do_mode : Specify what kind of data you want from the parser.
@@ -115,7 +115,7 @@ class Downloader(object):
         if 'outpath' in list(kwargs.keys()):
             outpath = kwargs['outpath']
         else:
-            outpath = 'output'
+            outpath = 'data'
         if kwargs['do_mode'] == 'es':
             es = ElasticSearch(kwargs['es_url'])
             for chunk in bulk_chunks((es.index_op(crfile.crdoc, id=crfile.crdoc.pop('id')) for crfile
@@ -218,7 +218,7 @@ class GovInfoDL(object):
         if 'outpath' in list(kwargs.keys()):
             self.outpath = kwargs['outpath']
         else:
-            self.outpath = 'output'
+            self.outpath = 'data'
         self.download_day(day, self.outpath)
 
 
@@ -230,7 +230,7 @@ class GovInfoExtract(object):
         dl_time = datetime.strptime(day, "%Y-%m-%d")
         year = str(dl_time.year)
         if 'outpath' not in list(kwargs.keys()):
-            outpath = 'output'
+            outpath = 'data'
         else:
             outpath = kwargs['outpath']
         if not os.path.isdir(outpath):

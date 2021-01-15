@@ -19,7 +19,8 @@ setup(
         'requests[security]',
         'PyYAML >= 3.11',
         'unicodecsv',
-        'future'
+        'future',
+        'tqdm',
         ],
         zip_safe=False
     )

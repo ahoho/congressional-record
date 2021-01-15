@@ -12,15 +12,31 @@ From the repository root, type ``python -m congressionalrecord.cli -h`` for inst
 
 This software is released as-is under the BSD3 License, with no warranty of any kind.
 
-# installation
+# Installation
 
-In Python 3 using `venv` for e.g.:
+In Python 3 using `conda` for e.g.:
 
 ```
 git clone https://github.com/unitedstates/congressional-record.git
 cd congressional-record
-python3 -m venv .venv
-.venv/bin/python -m pip install -e .
+conda create -n congressional python=3.8
+conda activate congressional
+pip install -e .
+```
+
+# Download data
+
+Use `python -m congressionalrecord.download -h` to see usage instructions
+
+# Processing data into a jsonlist 
+
+After having downloaded the data *in the json format* as above, you can combine it
+with legislator information to create a list of json objects. Requires you to download
+legislator information, both [historical](https://theunitedstates.io/congress-legislators/legislators-historical.json) and [current](https://theunitedstates.io/congress-legislators/legislators-current.json). Place them in the same directory.
+
+See `python congressionalrecord/process -h`
+
+
 ```
 
 then `.venv/bin/python -m congressionalrecord.cli -h` to see usage instructions.
