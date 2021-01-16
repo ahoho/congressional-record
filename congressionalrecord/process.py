@@ -202,7 +202,7 @@ if __name__ == "__main__":
         ],
         help=(
             "Legislator json files (each is a list of dictionaries), go to "
-            "https://theunitedstates.io/congress-legislators/ to download"
+            "https://github.com/unitedstates/congress-legislators to download"
         )
     )
     parser.add_argument("--output_dir", default="output")
