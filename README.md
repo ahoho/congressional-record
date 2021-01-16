@@ -32,9 +32,9 @@ Use `python -m congressionalrecord.download -h` to see usage instructions
 
 After having downloaded the data *in the json format* as above, you can combine it
 with legislator information to create a list of json objects. Requires you to download
-legislator information, both [historical](https://theunitedstates.io/congress-legislators/legislators-historical.json) and [current](https://theunitedstates.io/congress-legislators/legislators-current.json). Place them in the same directory.
+legislator information, both [historical](https://theunitedstates.io/congress-legislators/legislators-historical.json) and [current](https://theunitedstates.io/congress-legislators/legislators-current.json), or just run `download_legislator_data.sh`. Place them in the same directory.
 
-See `python congressionalrecord/process -h`
+See `python congressionalrecord/process -h` for more information
 
 # Recommended citation:
 
