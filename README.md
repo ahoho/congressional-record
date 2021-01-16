@@ -36,11 +36,6 @@ legislator information, both [historical](https://theunitedstates.io/congress-le
 
 See `python congressionalrecord/process -h`
 
-
-```
-
-then `.venv/bin/python -m congressionalrecord.cli -h` to see usage instructions.
-
 # Recommended citation:
 
 Judd, Nicholas, Dan Drinkard, Jeremy Carbaugh, and Lindsay Young. *congressional-record: A parser for the Congressional Record.* Chicago, IL: 2017.
