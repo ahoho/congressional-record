@@ -1,7 +1,8 @@
 import argparse
+import datetime
 import json
 import logging
-import datetime
+import re
 from pathlib import Path
 
 from tqdm import tqdm
@@ -161,7 +162,7 @@ def process_and_speech_data(
                     "source_file": str(path),
                     "title": data["title"],
                     "date": date,
-                    "text": text,
+                    "text": re.sub("\s+", " ", text),
                     
                     "chamber": data["header"]["chamber"],
 
